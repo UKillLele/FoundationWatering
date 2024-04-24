@@ -29,4 +29,5 @@ jobs:
         pip install -r requirements.txt
     - name: Test with unittest
       run: |
-        unittest
+        cd request_handler
+        python -m unittest discover -s ./test  -p 'test_*.py'
