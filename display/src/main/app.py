@@ -2,12 +2,16 @@
 
 from flask import Flask
 import requests
+from os import getenv
 
 app = Flask(__name__)
+api = getenv("analyzeApi")
+if not api:
+    api = "http://127.0.0.1:8000"
 
 
 def get_watering_time():
-    return requests.get("http://127.0.0.1:8000/get-watering-time")
+    return requests.get(api + "/get-watering-time")
 
 
 @app.route("/")
