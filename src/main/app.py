@@ -20,6 +20,6 @@ def main():
     return f'''
      <div>
         <h1>Should you water your foundation today in The Colony, Texas?</h1>
-        <p>You should water your foundation for {watering_time} minutes.
+        <p>You should water your foundation for {watering_time} minutes.</p>
      </div>
      '''
